@@ -1,0 +1,89 @@
+html,body{
+    font-family: 'Rubik', sans-serif;
+    background-color: #474646;
+}
+
+a{
+    color: #222;
+}
+.navbar-menu{
+    box-shadow: none!important;
+}
+a.navbar-item:hover {
+    color: #c0c0c0;
+}
+.categories {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 24px;
+    gap: 5px;
+    box-sizing: border-box;
+    width: 100%;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.categories::-webkit-scrollbar {
+    display: none;
+}
+.box{
+    padding: 10px;
+    position: relative;
+    background: rgb(119, 117, 117);
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,.3);
+    box-shadow: 0 3px 0 rgb(0 0 0 / 5%);
+    scroll-snap-align: start;
+    min-width: 122px;
+}
+.box:hover{
+    background-color: #c0c0c0;
+}
+.box img{
+    max-width: 80px;
+    width: auto;
+    height: 56px;
+    margin: 0 auto 5px;
+}
+.card{
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 3%), 0 10px 15px rgb(0 0 0 / 2%), 0 25px 80px rgb(0 0 0 / 4%);
+    transition: .25s;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    background-color: #807f7f;
+}
+.card figure img{
+    object-fit: cover;
+}
+
+.card .tag{
+    position: absolute;
+    right:10px;
+    top:10px;
+    font-weight: bold;
+}
+.is-borderless{
+    border: none;
+    box-shadow: none;
+}
+.input:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+.modal-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.modal-box img{
+  border-radius: 8px;
+}
+
+#restaurant-name{
+  text-transform: uppercase;
+}

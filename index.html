@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FutbolApp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/6.2.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar is-fixed-top has-shadow is-flex-touch is-justify-content-space-between">
+           
+            <div id="navbarBasicExample" class="navbar-menu is-flex">
+                <div class="navbar-start is-hidden-touch">
+                    <a class="navbar-item" id="ordenar">
+                        <b>Ordenar a-z</b>
+                    </a>
+
+                </div>
+                <div class="navbar-end is-flex-touch is-justify-content-space-between">
+                    <div class="navbar-item">
+                        <form class="field has-addons" id="busqueda">
+                            <div class="control">
+                                <input id="inputBusqueda" autocomplete="off" class="input is-borderless is-rounded has-background-light" type="text" placeholder="Buscar...">
+                            </div>
+                            <div class="control">
+                                <button type="button" class="button is-rounded is-light">
+                                    <span class="icon is-left">
+                                        <i class="mdi mdi-magnify mdi-24px"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <section class="section pt-5 pb-0">
+            <div class="container">
+                <div class="categories is-flex is-justify-content-space-between">
+                    <div class="box mr-2 mb-2 is-flex is-align-items-center is-flex-direction-column">
+                        <a href="#" id="4350" name="Mexican_Primera_League" class="has-text-centered" onclick="buscar(this.name)">
+                            <figure class="image">
+                                <img src="img/ligamx.svg">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="box mr-2 mb-2 is-flex is-align-items-center is-flex-direction-column">
+                        <a href="#" id="4335" name ="Spanish_La_Liga" class="has-text-centered" onclick="buscar(this.name)">
+                            <figure class="image">
+                                <img src="img/laliga.svg">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="box mr-2 mb-2 is-flex is-align-items-center is-flex-direction-column">
+                        <a href="#" id="4328" name="English_Premier_League" class="has-text-centered" onclick="buscar(this.name)">
+                            <figure class="image">
+                                <img src="img/premier.svg">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="box mr-2 mb-2 is-flex is-align-items-center is-flex-direction-column">
+                        <a href="#" id="4332" name="Italian_Serie_A"" class="has-text-centered" onclick="buscar(this.name)">
+                            <figure class="image">
+                                <img src="img/seriea.svg">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="box mr-2 mb-2 is-flex is-align-items-center is-flex-direction-column">
+                        <a href="#" id="4334" name="French_Ligue_1" class="has-text-centered" onclick="buscar(this.name)">
+                            <figure class="image">
+                                <img src="img/ligue1.svg">
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr/>
+        <section class="section py-3">
+            <div class="container">
+          <div id="results" class="columns is-multiline">
+            </div>
+            <div id="modal" class="modal mi-clase-1 mi-clase-2">
+              <div class="modal-background" onclick="mostrarModal()"></div>
+              <div class="modal-content">
+                <div class="modal-box">
+                  <article class="media">
+                    <div class="media-content">
+                      <div class="content">
+                        <div>
+                            <figure class="image is-64x64" style="margin-left:0px">
+                                <img id="equipo-image" class="is-block" src=""/>
+                              </figure>
+                            <h3 id="equipo-name"></h3>
+                        </div>
+                        
+                        <h6>País:</h6>
+                            <p id="equipo-pais"></p>
+                        <h6>Descripción:</h6>
+                            <p id="equipo-descripcion"></p>
+                            <h6>Buscar Jugadores:</h6>
+                            <div class="buscarjugador"></div>
+                        
+                      </div>
+                    </div>
+                  </article>
+                  
+                </div>
+              </div>
+              <button class="modal-close is-large" aria-label="close" onclick="mostrarModal()"></button>
+            </div>
+            
+        </div>
+    </main>
+      <script defer src="./index.js"></script>
+</body>
+</html>
